@@ -104,6 +104,7 @@
 - (void)cancelButtonTapped
 {
     [self hideViewWithAnimation];
+    [self.delegate taskCreationDidCanceled];
 }
 
 /**

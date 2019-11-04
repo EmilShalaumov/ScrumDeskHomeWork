@@ -21,4 +21,9 @@
  */
 - (void)taskDidCreatedWithTitle: (NSString *)title desc: (NSString *)desc;
 
+/**
+ Calls when view is removed without task creation
+ */
+- (void)taskCreationDidCanceled;
+
 @end

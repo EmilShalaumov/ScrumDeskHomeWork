@@ -125,6 +125,11 @@ class ViewController: UIViewController, ISSTaskCreationViewProtocol, UICollectio
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
     }
     
+    /// When view is removed without task creation we need to add bar button back
+    func taskCreationDidCanceled() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+    }
+    
     private func reorderItems(coordinator: UICollectionViewDropCoordinator, destinationIndexPath: IndexPath, collectionView: UICollectionView)
     {
         let items = coordinator.items
